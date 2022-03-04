@@ -4,11 +4,13 @@
 package assignment1;
 
 import java.util.*;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class App {
   public static List<User> userList;
+  private static final Logger logger = Logger.getLogger(App.class.getName());
 
 
     public static void main(String[] args) {
@@ -39,9 +41,11 @@ public class App {
             userList.sort(new UserComparator());
             for (User el : userList) {
                 System.out.println(el.getName());
+
             }
         }catch(Exception e){
-            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
+
         }
     }
 
@@ -59,7 +63,7 @@ public class App {
          }
      }
     }catch(Exception e){
-        System.out.println(e.getMessage());
+         logger.info(e.getMessage());
     }
     }
 
@@ -72,7 +76,7 @@ public class App {
             }
         }
         }catch(Exception e){
-            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
         }
     }
 
@@ -94,7 +98,7 @@ public class App {
            System.out.println(el.getName());
        }
        }catch(Exception e){
-           System.out.println(e.getMessage());
+           logger.info(e.getMessage());
        }
    }
 
@@ -113,7 +117,7 @@ public class App {
             }
         }
         }catch(Exception e){
-            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
         }
 
     }
@@ -138,7 +142,7 @@ public class App {
             System.out.println(el.getName());
         }
         }catch(Exception e){
-            System.out.println(e.getMessage());
+            logger.info(e.getMessage());
         }
 
 
